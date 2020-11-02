@@ -50,8 +50,9 @@
 	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
             <li><a class="smoothscroll" href="#portfolio">Works</a></li>
             <li><a class="smoothscroll" href="{% url 'contact' %}">Contact</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'admin:index' %} ">Admin</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %} ">work</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'admin:index' %} ">Admin</a></li>
+            
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
@@ -85,18 +86,14 @@
  <!-- Portfolio Section
    ================================================== -->
    <section id="portfolio">
-
       <div class="row">
-
          <div class="twelve columns collapsed">
          <center> <h2>ผลงาน.</h2>
          คลิกที่รูป"เพื่อลิงค์ไปยังเว็บรายชื่อพนักงาน"</center>        
          <center>
-           
         <a href="https://sarawut-kob.herokuapp.com/"><img src="{% static 'images/sample-image.jpg' %}" width="500"> </a> 
                <div class="portfolio-item">
                   <div class="item-wrap">
-
                      {% block content %}
                      <a href="#modal-02" title="">
                         <div class="overlay">
@@ -105,23 +102,47 @@
                               <p>Web Development</p>
                                <!-- Blog Entries Column -->
                           <div class="col-md-8">
-
                         </div>
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
                      </a>
-                        
                   </div>
           		</div> <!-- item end -->
-               </div> <!-- portfolio-wrapper end -->
+               </div> </div> <!-- twelve columns end --><!-- portfolio-wrapper end -->
             </center>
-         </div> <!-- twelve columns end -->
-         {% endblock %}
          
-               </div> <!-- portfolio-wrapper end -->
+         {% endblock %}
+         <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+      <div class="row">
+         <div class="twelve columns collapsed">
+         <center> <h2>ผลงาน.</h2>
+         คลิกที่รูป"เพื่อลิงค์ไปยังเว็บรายชื่อพนักงาน"</center>        
+         <center>
+        <a href="https://sarawut-kob.herokuapp.com/"><img src="{% static 'images/one.jpg' %}" width="500"> </a> 
+               <div class="portfolio-item">
+                  <div class="item-wrap">
+                     {% block content1 %}
+                     <a href="#modal-02" title="">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Console</h5>
+                              <p>Web Development</p>
+                               <!-- Blog Entries Column -->
+                          <div class="col-md-8">
+                        </div>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+                  </div>
+          		</div> <!-- item end -->
+               </div> </div> <!-- twelve columns end --><!-- portfolio-wrapper end -->
             </center>
-         </div> <!-- twelve columns end -->
+         
+         {% endblock %}
  </div>
 </body>
 
