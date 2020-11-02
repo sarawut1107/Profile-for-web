@@ -8,7 +8,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Ceevee - Free Responsive HTML5/CSS3 Template</title>
+	<title>Resume Sarawut</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -92,7 +92,7 @@
          <center> <h2>ผลงาน.</h2></center>        
          <center>
            
-         <a href="{% url 'about' %} "><img src="{% static 'images/portfolio/console.jpg' %}" width="500"></a> 
+        <img src="{% static 'images/portfolio/console.jpg' %}" width="500"> 
                <div class="portfolio-item">
                   <div class="item-wrap">
 
@@ -116,14 +116,13 @@
                </div> <!-- portfolio-wrapper end -->
             </center>
          </div> <!-- twelve columns end -->
-         <!-- Portfolio Section
-   ================================================== -->
-   <section id="portfolio">
-      <div class="row">
-         <div class="twelve columns collapsed">
-         <center> <h2>ผลงาน.</h2></center>        
-         <center>
-         <a href="{% url 'about' %} "><img src="{% static 'images/portfolio/console.jpg' %}" width="500"></a> 
+         {% endblock %}
+         <div class="row">
+
+            <div class="twelve columns collapsed">
+            <center> <h2>ผลงาน.</h2></center>        
+            <center>
+               <img src="{% static 'images/portfolio/console.jpg' %}" width="500"> 
                <div class="portfolio-item">
                   <div class="item-wrap">
                      <a href="#modal-02" title="">
@@ -145,9 +144,6 @@
                </div> <!-- portfolio-wrapper end -->
             </center>
          </div> <!-- twelve columns end -->
-
-         
-         {% endblock %}
  </div>
 </body>
 
