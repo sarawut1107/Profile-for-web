@@ -1,0 +1,38 @@
+{% extends 'blog.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+<!-- Blog Post -->
+
+        <div class="card mb-4">
+          <img class="card-img-top" src="" width="10" height="1000" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">{{resume.title}}</h2>
+            <p class="card-text">{{resume.content|linebreaks}}</p>
+           
+          </div>
+          <div class="card-footer text-muted">
+           วันที่ {resume.date_created}} 
+            <a href="#"></a>
+          </div>
+        </div>
+        <!-- Show Comment -->
+       
+        {% for comment in comments %}
+        <h3>Comment on this resume</h3>
+        
+        <div class="card mb-4">
+          <div class="card-header">
+            แนะนำ
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{comment.title}}</h5>
+            <p class="card-text">{{comment.comment}}</p>
+          </div>
+        </div>
+        {% endfor %}
+        
+{% endblock %}

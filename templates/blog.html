@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Ceevee - Free Responsive HTML5/CSS3 Template</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="{% static 'css/default.css' %} ">
+	<link rel="stylesheet" href="{% static 'css/layout.css' %} ">
+   <link rel="stylesheet" href="{% static 'css/media-queries.css' %} ">
+   <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %} ">
+
+   <!-- Script
+   ================================================== -->
+	<script src="{% static 'js/modernizr.js' %} "></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="{% static 'favicon.png' %} " >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home"  style="background: url({% static 'images/dd.jpg' %}) no-repeat;"  >
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="{% static 'Show navigation' %} ">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="{% url 'index' %} ">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+            <li><a class="smoothscroll" href="{% url 'contact' %}">Contact</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'admin:index' %} ">Admin</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %} ">work</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">Hi, I'm Sarawut</h1>
+            <h3>This is my resume and portfolio .</h3>
+            <hr />
+            <ul class="social">
+               <li><a href="https://www.facebook.com/kob.sarawut.11"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://twitter.com/home"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="https://mail.google.com/"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://www.instagram.com/?hl=th"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+   
+   <!-- About Section
+   ================================================== -->
+ <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+         <center> <h2>ผลงาน.</h2></center>        
+         <center>
+           
+         <a href="{% url 'about' %} "><img src="{% static 'images/portfolio/console.jpg' %}" width="500"></a> 
+               <div class="portfolio-item">
+                  <div class="item-wrap">
+
+                     {% block content %}
+                     <a href="#modal-02" title="">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Console</h5>
+                              <p>Web Development</p>
+                               <!-- Blog Entries Column -->
+                          <div class="col-md-8">
+
+                        </div>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+                        
+                  </div>
+          		</div> <!-- item end -->
+               </div> <!-- portfolio-wrapper end -->
+            </center>
+         </div> <!-- twelve columns end -->
+         <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+      <div class="row">
+         <div class="twelve columns collapsed">
+         <center> <h2>ผลงาน.</h2></center>        
+         <center>
+         <a href="{% url 'about' %} "><img src="{% static 'images/portfolio/console.jpg' %}" width="500"></a> 
+               <div class="portfolio-item">
+                  <div class="item-wrap">
+                     <a href="#modal-02" title="">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Console</h5>
+                              <p>Web Development</p>
+                               <!-- Blog Entries Column -->
+                          <div class="col-md-8">
+
+                        </div>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+                        
+                  </div>
+          		</div> <!-- item end -->
+               </div> <!-- portfolio-wrapper end -->
+            </center>
+         </div> <!-- twelve columns end -->
+
+         
+         {% endblock %}
+ </div>
+</body>
+
+</html>
